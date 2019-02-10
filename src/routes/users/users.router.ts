@@ -13,8 +13,19 @@ class UsersRouter extends ModelRouter<User> {
     })
   }
 
+  findByEmail = (req: restify.Request, res: restify.Response, next: restify.Next) => {
+    if (req.query.email) {
+      User.findByEmail(req.query.email)
+        .then(user => user ? [user] : [])
+        .then(this.renderAll(res, next))
+        .catch(next)
+    } else {
+      next()
+    }
+  }
+
   applyRoutes(application: restify.Server) {
-    application.get('/users', this.findAll)
+    application.get('/users', [this.findByEmail, this.findAll])
     application.get('/users/:id', [this.validateId, this.findById])
     application.post('/users', this.save)
     application.put('/users/:id', [this.validateId,this.replace])
