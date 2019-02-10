@@ -1,0 +1,28 @@
+{
+  "name": "meat-api",
+  "version": "1.0.0",
+  "description": "API de restaurantes",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "./node_modules/nodemon/bin/nodemon.js dist/app.js",
+    "watch:ts": "./node_modules/typescript/bin/tsc -w",
+    "build": "./node_modules/typescript/bin/tsc --build tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Rogério",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "mongoose": "^5.4.11",
+    "restify": "^7.7.0",
+    "restify-errors": "^6.1.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/mongoose": "^5.3.12",
+    "@types/restify": "^7.2.7",
+    "@types/restify-errors": "^4.3.3",
+    "nodemon": "^1.18.10",
+    "typescript": "^3.3.3"
+  }
+}
