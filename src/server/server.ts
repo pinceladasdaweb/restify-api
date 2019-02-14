@@ -18,7 +18,7 @@ export class Server {
     })
   }
 
-  initRoutes(routers: Router[]): Promise<any>{
+  initRoutes(routers: Router[]): Promise<any> {
     return new Promise((resolve, reject) => {
       try{
         this.application = restify.createServer()
@@ -42,8 +42,12 @@ export class Server {
     })
   }
 
-  bootstrap(routers: Router[] = []): Promise<Server>{
+  bootstrap(routers: Router[] = []): Promise<Server> {
     return this.initDb().then(() => 
            this.initRoutes(routers).then(() => this))
+  }
+
+  shutdown() {
+    return mongoose.disconnect().then(() => this.application.close())
   }
 }
