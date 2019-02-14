@@ -7,7 +7,7 @@
     "dev": "./node_modules/nodemon/bin/nodemon.js dist/app.js",
     "watch:ts": "./node_modules/typescript/bin/tsc -w",
     "build": "./node_modules/typescript/bin/tsc --build tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Pedro Rogério",
   "license": "ISC",
@@ -19,10 +19,15 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
+    "@types/jest": "^24.0.0",
     "@types/mongoose": "^5.3.12",
     "@types/restify": "^7.2.7",
     "@types/restify-errors": "^4.3.3",
+    "@types/supertest": "^2.0.7",
+    "jest": "^24.1.0",
     "nodemon": "^1.18.10",
+    "supertest": "^3.4.2",
+    "ts-jest": "^23.10.5",
     "typescript": "^3.3.3"
   }
 }
