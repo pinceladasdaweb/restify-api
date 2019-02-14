@@ -11,5 +11,8 @@ module.exports = {
     "jsx",
     "json",
     "node"
-  ]
+  ],
+  globals: {
+    "adrress": "http://localhost:3001"
+  }
 };
