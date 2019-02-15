@@ -5,6 +5,7 @@ import { environment } from '../common/environment'
 import { Router } from '../common/router'
 import { mergePatchBodyParser } from './merge-patch.parser'
 import { handleError } from './error.handler'
+import { tokenParser } from '../security/token.parser'
 
 export class Server {
 
@@ -26,6 +27,7 @@ export class Server {
         this.application.use(restify.plugins.queryParser())
         this.application.use(restify.plugins.bodyParser())
         this.application.use(mergePatchBodyParser)
+        this.application.use(tokenParser)
 
         for (let router of routers) {
           router.applyRoutes(this.application)
