@@ -13,6 +13,6 @@ module.exports = {
     "node"
   ],
   globals: {
-    "adrress": "http://localhost:3001"
+    "address": "http://localhost:3001"
   }
 };
