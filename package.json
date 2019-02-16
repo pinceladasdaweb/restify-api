@@ -1,7 +1,7 @@
 {
   "name": "meat-api",
   "version": "1.0.0",
-  "description": "API de restaurantes",
+  "description": "Restaurants API",
   "main": "dist/app.js",
   "scripts": {
     "dev": "./node_modules/nodemon/bin/nodemon.js dist/app.js",
