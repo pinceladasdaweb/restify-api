@@ -4,6 +4,7 @@ import { Server } from './src/server/server'
 import { environment } from './src/common/environment'
 import { usersRouter } from './src/routes/users/users.router'
 import { reviewsRouter } from './src/routes/reviews/reviews.router'
+import { restaurantsRouter } from './src/routes/restaurants/restaurants.router'
 import { User } from './src/routes/users/users.model'
 import { Review } from './src/routes/reviews/reviews.model'
 import { Restaurant } from './src/routes/restaurants/restaurants.model'
@@ -16,7 +17,8 @@ const beforeAllTests = () => {
   server = new Server()
   return server.bootstrap([
     usersRouter,
-    reviewsRouter
+    reviewsRouter,
+    restaurantsRouter
   ])
  .then(() => User.deleteMany({}).exec())
  .then(() => {
