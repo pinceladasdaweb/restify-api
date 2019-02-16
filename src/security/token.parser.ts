@@ -1,8 +1,10 @@
+/// <reference path="../typings/index.d.ts" />
+
 import * as restify from 'restify'
 import * as jwt from 'jsonwebtoken'
 
 import { User } from '../routes/users/users.model'
-import { environment } from '../common/environment' 
+import { environment } from '../common/environment'
 
 export const tokenParser: restify.RequestHandler = (req: restify.Request, res: restify.Response, next: restify.Next) => {
   const token: string = extractToken(req)
