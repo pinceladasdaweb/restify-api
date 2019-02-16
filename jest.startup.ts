@@ -6,6 +6,7 @@ import { usersRouter } from './src/routes/users/users.router'
 import { reviewsRouter } from './src/routes/reviews/reviews.router'
 import { User } from './src/routes/users/users.model'
 import { Review } from './src/routes/reviews/reviews.model'
+import { Restaurant } from './src/routes/restaurants/restaurants.model'
 
 let server: Server
 
@@ -18,7 +19,16 @@ const beforeAllTests = () => {
     reviewsRouter
   ])
  .then(() => User.deleteMany({}).exec())
+ .then(() => {
+   let admin = new User()
+   admin.name = 'admin'
+   admin.email = 'admin@email.com'
+   admin.password = '123456'
+   admin.profiles = ['admin', 'user']
+   return admin.save()
+ })
  .then(() => Review.deleteMany({}).exec())
+ .then(() => Restaurant.deleteMany({}).exec())
 }
 
 const afterAllTests = () => {
