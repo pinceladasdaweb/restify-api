@@ -10,7 +10,7 @@ export interface User extends mongoose.Document {
   password: string,
   cpf: string,
   gender: string,
-  profiles: [],
+  profiles: string[],
   matches(password: string): boolean,
   hasAny(...profiles: string[]): boolean
 }
