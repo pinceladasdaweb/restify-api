@@ -4,6 +4,7 @@ module.exports = {
     script: './dist/app.js',
     instances: 0,
     exec_mode: 'cluster',
+    merge_logs: true,
     env: {
       SERVER_PORT: 3000,
       DB_URL: 'mongodb://localhost/meat-api',
