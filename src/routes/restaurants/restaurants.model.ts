@@ -13,12 +13,15 @@ export interface Restaurant extends mongoose.Document {
 const menuSchema = new mongoose.Schema({
   name: {
     type: String,
+    trim: true,
     required: true
   },
   price: {
     type: Number,
     required: true
   }
+}, {
+  timestamps: true
 })
 
 const restSchema = new mongoose.Schema({
@@ -32,6 +35,8 @@ const restSchema = new mongoose.Schema({
     select: false,
     default: []
   }
+}, {
+  timestamps: true
 })
 
 export const Restaurant = mongoose.model<Restaurant>('Restaurant', restSchema)

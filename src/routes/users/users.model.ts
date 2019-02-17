@@ -22,6 +22,7 @@ export interface UserModel extends mongoose.Model<User> {
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
+    trim: true,
     required: true,
     maxlength: 80,
     minlength: 3
@@ -52,8 +53,11 @@ const userSchema = new mongoose.Schema({
   },
   profiles: {
     type: [String],
-    required: false
+    required: false,
+    default: 'user'
   }
+}, {
+  timestamps: true
 })
 
 userSchema.statics.findByEmail = function(email: string, projection: string) {

@@ -14,14 +14,18 @@ export interface Review extends mongoose.Document {
 const reviewSchema = new mongoose.Schema({
   date: {
     type: Date,
+    default: Date.now,
     required: true
   },
   rating: {
     type: Number,
-    required: true
+    required: true,
+    min: 1,
+    max: 5
   },
   comments: {
     type: String,
+    trim: true,
     required: true,
     maxlength: 500
   },
@@ -35,6 +39,8 @@ const reviewSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   }
+}, {
+  timestamps: true
 })
 
 export const Review = mongoose.model<Review>('Review', reviewSchema)
