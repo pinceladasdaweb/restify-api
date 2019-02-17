@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "./node_modules/nodemon/bin/nodemon.js dist/app.js",
     "watch:ts": "./node_modules/typescript/bin/tsc -w",
-    "start": "concurrently --kill-others \"npm run watch:ts\" \"npm run dev\"",
+    "start": "npm run build && concurrently --kill-others \"npm run watch:ts\" \"npm run dev\"",
     "build": "./node_modules/typescript/bin/tsc --build tsconfig.json",
     "test": "ts-node jest.startup.ts"
   },
