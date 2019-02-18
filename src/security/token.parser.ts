@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../types/restify.d.ts" />
 
 import * as restify from 'restify'
 import * as jwt from 'jsonwebtoken'
