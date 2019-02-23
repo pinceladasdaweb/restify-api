@@ -8,7 +8,7 @@ Example of creating an RESTful API using [Node.js](https://nodejs.org), [TypeScr
 * Database: [Mongodb](http://mongodb.org) with [Mongoose](http://mongoosejs.com/).
 * JWT.
 * HATEOAS.
-* Tests.
+* [Jest](https://jestjs.io/).
 
 ## Getting started
 
@@ -17,7 +17,7 @@ Example of creating an RESTful API using [Node.js](https://nodejs.org), [TypeScr
 git clone git@github.com:pinceladasdaweb/restify-api.git myproject
 cd myproject
 
-# Install depenencies
+# Install dependencies
 npm install
 
 # Start server
