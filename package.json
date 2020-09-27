@@ -13,7 +13,7 @@
   "author": "Pedro Rogério",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.4",
+    "bcrypt": "^5.0.0",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.11",
     "restify": "^7.7.0",
