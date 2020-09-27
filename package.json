@@ -16,7 +16,7 @@
     "bcrypt": "^5.0.0",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.7.5",
-    "restify": "^7.7.0",
+    "restify": "^8.5.1",
     "restify-cors-middleware": "^1.1.1",
     "restify-errors": "^6.1.1"
   },
@@ -29,12 +29,12 @@
     "@types/restify-cors-middleware": "^1.0.1",
     "@types/restify-errors": "^4.3.3",
     "@types/supertest": "^2.0.7",
-    "concurrently": "^4.1.0",
-    "jest": "^24.1.0",
-    "jest-cli": "^24.1.0",
-    "nodemon": "^1.18.10",
+    "concurrently": "^5.3.0",
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2",
+    "nodemon": "^2.0.4",
     "supertest": "^3.4.2",
-    "ts-jest": "^23.10.5",
+    "ts-jest": "^26.4.0",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3"
   }
