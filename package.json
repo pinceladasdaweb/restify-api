@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.11.8",
     "restify": "^8.5.1",
     "restify-cors-middleware": "^1.1.1",
